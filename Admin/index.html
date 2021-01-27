@@ -1,0 +1,411 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <title>Admin - Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Sticky Pages -->
+    <header class="site-header">
+          <div class="header-wrapper">
+            <div class="logo-wrapper">
+
+            <!-- Logo -->
+            <a href="#" title="Site Logo" class="navbar-brand">
+              <img src="img/logo.png" id="logo">
+            </a>
+
+            </div>
+
+            <!-- Main Menu bar -->
+            <div class="navigation-wrapper">
+              <nav class="main-nav">  
+                 <ul class="menu-navigation">
+                    <li>
+                      <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+
+	                  <div class="dropdown show">
+						  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Notes
+						  </a>
+
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%;" href="#">Notes Under Review</a>
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%;" href="#">Published Notes</a>
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%;" href="#">Downloaded Notes</a>
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%;" href="#">Rejected Notes</a>
+						  </div>
+    				  </div>
+
+                    </li>
+                    <li>
+                      <a href="#">Members</a>
+                    </li>
+                    <li>
+                      <a href="#">Reports</a>
+                    </li>
+                    <li>
+                      <a href="#">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#">
+
+						<div class="dropdown show">
+						  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <img class="profile-img" src="img/team-1.jpg">
+						  </a>
+
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%;" href="#">Update Profile</a>
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%;" href="#">Change Password</a>
+	                          <a class="dropdown-item" style="font-weight: 400; margin: 5%; color: #6255a5;" href="#">LOGOUT</a>
+						  </div>
+						</div>
+                        
+                      </a>
+
+                    </li>
+                    <li>
+                      <button id="logout-button">Logout</button>
+                    </li>
+                  </ul>     
+              </nav>
+            </div>
+
+          </div>
+    </header> 
+    <!-- End Header -->
+
+    <br><br><br><br><br><br>
+    <!-- Dashboard - Brief-->
+    <section>
+        <div class="container" style="z-index: 999;">
+
+
+        	<!--Navbar-->
+			<nav class="navbar navbar-expand-lg navbar-dark indigo mb-4">
+
+			  <!-- Navbar brand -->
+			  <a class="dashboard-content" href="#">Dashboard</a>
+
+			  <!-- Collapsible content -->
+			  <div id="navbarSupportedContent">
+
+			    <form class="form-inline ml-auto" style="float: right;z-index: 999;">
+
+			      			<button
+						      type="button"
+						      class="btn dropdown-toggle"
+						      id="dropdownMenuOffset"
+						      data-mdb-toggle="dropdown"
+						      aria-expanded="false"
+						      data-mdb-offset="10,20"
+						      style="background-color: #6255a5;color: #fff;">
+						      Add Notes
+						    </button>
+
+			    </form>
+
+			  </div>
+			  <!-- Collapsible content -->
+
+                        
+			</nav>
+			<!--/.Navbar-->
+
+    </section>
+
+
+    
+    <section id="dashboard-brief">
+        <div class="container">
+            
+            <div class="row" style="margin-left: 0.7%;">
+
+              <table class="table table-bordered col-md-6" style="width: 32%;">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 2%; padding: 8.5%;">
+                          <div>
+                            <center>
+                            <p class="content">20</p>
+                            <p style="font-weight: 400">Numbers of Notes in Review for Publish<br><br></p>
+                            </center>
+                          </div>
+                      </th>
+                    </tr>
+                  </thead>
+              </table>
+
+              <table class="table table-bordered col-md-6" style="width: 32%; margin-left: 1%;">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 2%; padding: 8.5%;">
+                          <div>
+                            <center>
+                            <p class="content">103</p>
+                            <p style="font-weight: 400">Numbers of New Notes Downloaded (Last 7 days)</p>
+                            </center>
+                          </div>
+                      </th>
+                    </tr>
+                  </thead>
+              </table>
+
+              <table class="table table-bordered col-md-6" style="width: 32%; margin-left: 1%;">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 2%; padding: 8.5%;">
+                          <div>
+                            <center>
+                            <p class="content">223</p>
+                            <p style="font-weight: 400">Numbers of New registrations (Last 7 days)</p>                            
+                           </center>
+                          </div>
+                      </th>
+                    </tr>
+                  </thead>
+              </table>
+
+          </div>
+
+        </div>
+        
+    </section>
+    <br>
+
+    <!-- In Progress Notes -->
+    <section>
+        <div class="container">
+
+
+        	<!--Navbar-->
+			<nav class="navbar navbar-expand-lg navbar-dark indigo mb-4">
+
+			  <!-- Navbar brand -->
+			  <a class="dashboard-content" href="#">In Progress Notes</a>
+
+			  <!-- Collapsible content -->
+			  <div id="navbarSupportedContent">
+
+			    <form class="form-inline ml-auto" style="float: right;">
+
+			      	<div class="dropdown show">
+
+			      		<div class="md-form my-0" style="display: inline;">
+			       		 	<input class="form-control" type="text" placeholder="Search" aria-label="Search">
+			      		</div>
+
+			      		<button href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit" style="display: inline; background-color: #6255a5; color: #fff;">Search</button>
+
+
+						<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						
+							<button type="button" class="btn dropdown-toggle" id="dropdownMenuOffset" data-mdb-toggle="dropdown" aria-expanded="false" data-mdb-offset="10,20" style="background-color: transparent; color: black;"> Search month</button>
+						
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink"  style="z-index: 999;">
+	                       <a class="dropdown-item" style="font-weight: 400; margin: 5%;color: black;" href="#">Update Profile</a>
+	                       <a class="dropdown-item" style="font-weight: 400; margin: 5%;color: black;" href="#">Change Password</a>
+	                       <a class="dropdown-item" style="font-weight: 400; margin: 5%;color: black;" href="#">LOGOUT</a>
+			    		</div>
+					</div>
+
+
+			    </form>
+
+			  </div>
+			  <!-- Collapsible content -->
+
+			</nav>
+			<!--/.Navbar-->
+
+    </section>
+
+    <!-- In Progress Tables -->
+    <section id="in-progress-table">
+        <div class="container">
+            <div class="row" style="margin: 0.7%">
+            	
+                <table class="table table-bordered table-hover" style="padding: 10%; overflow-x: auto;
+    overflow-y: hidden;">
+                    
+                    <thead>
+                      
+                      <tr style="text-align: center;">
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">SR. NO.</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">TITLE</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">CATEGORY</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">ATTACHMENT SIZE</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">SELL TYPE</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">PRICE</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">PUBLISHER</th>
+                        <th style="padding: 1.2%;border-right-style:hidden;text-align: center;">PUBLISHED DATE</th>
+                        <th style="padding: 1.2%;text-align: center;">NUMBER OD DOWNLOADS</th>
+                      </tr>
+
+                      <tr>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">1</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Data Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">10 KB</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Free</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">$0</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Pritesh Panchal</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">09-10-2020, 10:30</td>
+                        <td style="padding: 1.2%;text-align: center;">
+                        	<div style="display: inline-block; word-spacing: 25; overflow: visible;">
+                        		<span>10</span>
+                        		<span>
+                        			
+                        			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-ellipsis-v" style="color: #CAC5C8"></i>
+									</a>
+
+                        		</span>
+                        	</div>
+                        </td>
+                    </tr>
+
+<tr>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">1</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Data Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">10 KB</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Free</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">$0</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Pritesh Panchal</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">09-10-2020, 10:30</td>
+                        <td style="padding: 1.2%;text-align: center;">
+                        	<div style="display: inline-block; word-spacing: 25; overflow: visible;">
+                        		<span>10</span>
+                        		<span>
+                        			
+                        			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-ellipsis-v" style="color: #CAC5C8"></i>
+									</a>
+
+                        		</span>
+                        	</div>
+                        </td>
+                    </tr>
+
+<tr>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">1</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Data Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">10 KB</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Free</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">$0</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Pritesh Panchal</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">09-10-2020, 10:30</td>
+                        <td style="padding: 1.2%;text-align: center;">
+                        	<div style="display: inline-block; word-spacing: 25; overflow: visible;">
+                        		<span>10</span>
+                        		<span>
+                        			
+                        			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-ellipsis-v" style="color: #CAC5C8"></i>
+									</a>
+
+                        		</span>
+                        	</div>
+                        </td>
+                    </tr>
+
+<tr>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">1</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Data Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Science</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">10 KB</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Free</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">$0</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">Pritesh Panchal</td>
+                        <td style="padding: 1.2%;border-right-style:hidden;text-align: center;">09-10-2020, 10:30</td>
+                        <td style="padding: 1.2%;text-align: center;">
+                        	<div style="display: inline-block; word-spacing: 25; overflow: visible;">
+                        		<span>10</span>
+                        		<span>
+                        			
+                        			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-ellipsis-v" style="color: #CAC5C8"></i>
+									</a>
+
+                        		</span>
+                        	</div>
+                        </td>
+                    </tr>
+
+                    </thead>
+
+                </table>
+                
+            </div>
+        </div>
+
+
+        <br>
+              <center>
+                <div>
+                  <span><button type="button" class="btn btn-primary btn-circle btn-sm">1</button></span>
+                  <span><button type="button" class="btn btn-primary btn-circle btn-sm">2</button></span>
+                  <span><button type="button" class="btn btn-primary btn-circle btn-sm">3</button></span>
+                  <span><button type="button" class="btn btn-primary btn-circle btn-sm">4</button></span>
+                  <span><button type="button" class="btn btn-primary btn-circle btn-sm">5</button></span>
+                </div>
+              </center>        
+
+    </section>
+
+
+    <!-- Footer  -->
+    <footer>
+
+        <div class="container-fluid">
+  
+            <div class="row">
+                <div class="col-md-6" style="margin-left: 5%;">
+                    <p>
+                        Copyright &copy; Tatvasoft All rights reserved.</span>
+                    </p>
+                </div>
+                <div style="text-align: right; margin-right:5%; ">
+                  <a href="#"><i class="fa fa-facebook" ></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a> 
+                </div>
+            </div>
+
+      </div>
+
+        <!-- Back To Top -->
+        <a href="#home" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll col-md-12 hidden-sm hidden-xs" title="home" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+    </footer>
+    <!-- Footer Ends -->
+
+        <!-- JQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/style.js"></script>
+
+</body>
+</html>
