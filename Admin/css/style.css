@@ -1,0 +1,375 @@
+/* body */
+
+#user-photo {
+          padding: 3px 15px 3px 5px;
+}
+
+.space-ico{
+          padding: 10px;
+}
+
+/* DropDown */
+.nav-dropdown-item,
+.action-dropdown-item {
+          display: flex;
+          width: 200px;
+          padding: 5px 0 10px 10px;
+          background-color: #fff;
+          border: none;
+          -webkit-transition: all 500ms linear;
+          transition: all 500ms linear;
+}
+
+.nav-dropdown-item:hover,
+.action-dropdown-item:hover {
+          color: #000;
+          background-color: #ffffff;
+          transition-delay: 0.3s;
+}
+
+.nav-dropdown-item:last-of-type {
+          color: #6255a5;
+}
+
+.nav-dropdown-item:last-of-type:hover {
+          color: #fff;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#background-img-login{
+
+    background-image: url("../img/banner-with-overlay-login.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.login-box{
+    
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.login-box .centerdiv{
+    padding: 50px 50px;
+    width:100%;
+    height:100%;
+    background-color: white;
+}
+.login-box #img-1{
+    text-align: center;
+    padding-bottom: 25px;
+    position: relative;
+    margin-left: 150px;
+
+}
+.login-box .centerdiv #header-1{
+   font-family: sans-serif;
+   font-size: 34px;
+   font-weight: 600;
+   line-height: 38px;
+   color:#6255a5;
+   text-align: center;
+   padding-bottom: 20px;
+}
+.login-box .centerdiv #text-1{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    color:#333333;
+    text-align: center;
+    padding-bottom: 45px;
+ }
+ button.login-btn{
+    font-family: sans-serif;
+    width: 480px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #6255a5;
+    color:#fff;
+    text-align: center; 
+    
+ }
+ .signup-link{
+    padding-top: 20px; 
+     text-align: center;
+ }
+ .signup-link a{
+     color: #6255a5;
+ }
+ #exampleInputEmail1{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#000;
+    border: 1px solid #6255a5;
+    border-radius: 3px;   
+    
+ }
+ #exampleInputPassword1{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#000;
+    border: 1px solid #6255a5;
+    border-radius: 3px;
+
+ }
+.form-group a{
+    color:#6255a5;
+    margin-left:280px;
+}
+.login-btn{
+  margin: 10px;
+  background-color: #6255a5;
+  color: #fff;
+}
+
+
+
+
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+  height: 100%;
+}
+
+/* =========================================
+                 Section
+============================================*/
+
+section {
+    background: #fff;
+}
+
+
+/* Content Boxes */
+
+.content-box-lg {
+    padding: 120px 0;
+}
+
+.content-box-md {
+    padding: 100px 0;
+}
+
+.content-box-sm {
+    padding: 90px 0;
+}
+
+/*  Header Menu */
+
+.site-header {
+    padding: 18px 0;
+    background-color: white;
+    position: fixed;
+    border-bottom-color: black;
+    box-shadow: 0 8px 6px -9px #999;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    z-index: 999;
+}
+.sticky-header .site-header {
+    box-shadow: 0 0 3px rgba(0,0,0,.11);
+    transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    padding: 5px 0;
+    box-shadow: 0 8px 6px -9px #999;
+  background: #821549;
+}
+.site-header .header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 40px;
+    transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+}
+.site-header .header-wrapper .logo-wrapper a{
+  color:#fff;
+  text-decoration:none;
+  font-size:50px;
+}
+.site-header .header-wrapper .logo-wrapper {
+    position: relative;
+}
+.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style:none;
+}
+.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation>li {
+    margin: 0 20px;
+}
+.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation>li a {
+    font-size: 16px;
+    font-family: Open Sans;
+    display: inline-block;
+    line-height: 20px;
+    font-weight: 600;
+    color: black;
+    text-decoration:none;
+}
+.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation>li a img{
+    width: auto;
+    height: 40px;
+}
+.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li button {
+  width: 89px;
+  height: 30px;
+  border-radius: 4px;
+  color:#fff;
+  font-style: Open Sans;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #6255a5;
+}
+.profile-img {
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+}
+
+/* Dashboard - Brief */
+
+.top-content {
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+.dashboard-content {
+	color: #6255a5;
+	font-family: Open Sans;
+	font-weight: 600;
+	font-size: 25px;
+	float: left;
+}
+.btn-note {
+	color: #fff;
+	background-color: #6255a5;
+}
+
+/* Earning Tables */
+.earning-img {
+	width: 30%;
+}
+.content {
+	color: #6255a5;
+}
+
+.right-nav {
+	float: right;
+}
+
+/*In-Progress table*/
+#in-progress-table {
+	margin: 1%;
+}
+
+.round-btn {
+  background-color: #6255a5;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5%;
+  margin: 0.2%;
+  border-radius: 100%;
+}
+
+/* table */
+.right-border {
+  border-right-style:hidden;
+}
+
+
+.btn-circle.btn-sm { 
+  width: 30px; 
+  height: 30px; 
+  padding: 6px 0px; 
+  border-radius: 15px; 
+  font-size: 11px; 
+  text-align: center; 
+}
+.btn.btn-primary {
+  background-color: #6255a5;
+} 
+.btn-hover {
+  background-color: #6255a5;
+}
+
+/* Dropbox */
+.text-style {
+  font-weight: 400;
+}
+/* Top Content */
+.content-category,
+#contact-us-form .content-top {
+    color: #6255a5;
+    font-size: 27px;
+    font-weight: 550;
+    font-family: Open Sans;
+}
+
+#btn,
+#contact-us-form .btn {
+  background-color: #6255a5;
+  color: #fff;
+  font-weight: 500;
+  font-style: Open Sans;
+  padding: 3px 10px;
+}
+
+.labels {
+  font-weight: 500;
+}
+#contact-us-form {
+  margin-top: 100px;
+}
+.left-content {
+  padding: 0.7%;
+  font-family: Open Sans;
+  font-weight: 600;
+  float: left;
+  color: #fff;
+  background-color: #6255a5;
+}
+.right-content {
+  float: right;
+  width: 22%;
+}
+.right-content > .content .search{
+  height: 35px;
+}
+.right-content > .content button{
+  padding: 0.7%;
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #fff;
+  height: 38px;
+  background-color: #6255a5;
+}
