@@ -1,0 +1,75 @@
+﻿@model Notemarketplace_front.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<!-- Login Section -->
+<section id="login" class="login-overlay">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="login-parent">
+            <div class="login-child">
+                <img class="img-responsive" src="~/Content/img/top-logo.png" alt="">
+                <div class="login-details">
+                    <div class="text-center">
+                        <p>Login</p>
+                        <p>Enter your email address and password to login</p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>Email*</p>
+                                    @*<input type="text" class="form-control" id="email" placeholder="Enter Email">*@
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @id = "email", @class = "form-control", @placeholder = "Enter Email" } })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>Password* <span><a href="/ForgotPassword/Forgot_password">Forgot Password?</a></span></p>
+                                    @*<input type="password" class="form-control" id="password" placeholder="Enter Password">*@
+                                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @id = "password", @class = "form-control", @placeholder = "Enter Password" } })
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input error">
+                                    @if (@ViewBag.NotValidUser != null)
+                                    {
+                                        <label style="color:#ff0000"> @ViewBag.NotValidUser</label>
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <label>
+                                        <input type="checkbox" name="remember">Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <Button class="form-control">
+                                        Login
+                                    </Button>
+                                </div>
+                            </div>
+                            <div class="col-md-12 no-account">
+                                <p>Don't have an account? <span><a href="/SignUp/SignUp">Signup</a></span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+<!-- login section ends -->
