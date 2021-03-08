@@ -1,0 +1,54 @@
+﻿@model Notemarketplace_front.Database.tblCountry
+
+@{
+    ViewBag.Title = "Admin_add_country";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Add Country -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="add-country">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="page-heading">Add Country</p>
+                </div>
+                <div class="col-md-6 inside-col">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p>Country Name*</p>
+                            @*<input type="text" class="form-control" id="name" placeholder="Enter Country name">*@
+
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Country name" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p>Country Code*</p>
+                            @*<input type="text" class="form-control" id="name" placeholder="Enter Country code">*@
+
+                            @Html.EditorFor(model => model.CountryCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Country code" } })
+                            @Html.ValidationMessageFor(model => model.CountryCode, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group error">
+
+                            @if (@ViewBag.Message != null)
+                            {
+                                <label style="color:red"> @ViewBag.Message</label>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-general btn-work">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+    </section>
+}

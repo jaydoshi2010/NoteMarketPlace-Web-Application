@@ -1,0 +1,96 @@
+﻿@model Notemarketplace_front.Database.tblUser
+
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<!-- SignUp Section -->
+<section id="signup" class="signup-overlay">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="signup-parent">
+            <div class="signup-child">
+                <img class="img-responsive" src="~/Content/img/top-logo.png" alt="">
+                <div class="signup-details">
+                    <div class="text-center">
+                        <p>create an Account</p>
+                        <p>Enter your details to signup</p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>First Name*</p>
+                                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @id = "fname", @class = "form-control", @placeholder = "Enter First Name" } })
+                                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>Last Name*</p>
+                                    @*<input type="text" class="form-control" id="email" placeholder="Enter  your last name">*@
+
+                                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @id = "lname", @class = "form-control", @placeholder = "Enter Last Name" } })
+                                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>Email*</p>
+                                    @*<input type="text" class="form-control" id="email" placeholder="Enter email">*@
+
+                                    @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @id = "email", @class = "form-control", @placeholder = "Enter Email" } })
+                                    @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>Password</p>
+                                    @*<input type="password" class="form-control" id="password" placeholder="Enter your password">*@
+
+                                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @id = "Password", @class = "form-control", @placeholder = "Enter Password" } })
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <p>Password</p>
+                                    @*<input type="password" class="form-control" id="password" placeholder="Re-enter password">*@
+
+                                    @Html.EditorFor(model => model.RePassword, new { htmlAttributes = new { @id = "Password", @class = "form-control", @placeholder = "Enter Password" } })
+                                    @Html.ValidationMessageFor(model => model.RePassword, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group error">
+                                    @if (@ViewBag.NotValidPassword != null)
+                                    {
+                                        <label style="color:#ff0000"> @ViewBag.NotValidPassword</label>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-input dis">
+                                    <Button class="form-control">
+                                        signup
+                                    </Button>
+                                </div>
+                            </div>
+                            <div class="col-md-12 no-account">
+                                <p>Allready have an account? <span><a href="/Login/Login">Login</a></span></p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+    <!-- SignUp Section Ends -->

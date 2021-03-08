@@ -1,0 +1,57 @@
+﻿@model Notemarketplace_front.Database.tblNoteType
+@{
+    ViewBag.Title = "Admin_add_type";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- manage-type -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="add-type">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="page-heading">Add Type</p>
+            </div>
+            <div class="col-md-6 inside-col">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <p>type Name*</p>
+                        @*<input type="text" class="form-control" id="name" placeholder="Enter  type name">*@
+
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Note type" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <p>Description*</p>
+                        @*<textarea name="" class="form-control" placeholder="Enter your description"></textarea>*@
+
+                        @Html.TextAreaFor(model => model.Description, new { @id = "text-area", @class = "form-control", placeholder = "Desciption" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group error">
+                        @if (@ViewBag.Message != null)
+                         {
+                            <label style="color:red"> @ViewBag.Message</label>
+                         }
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    @*<a class="btn btn-general btn-work  smooth-scroll" href="#about" title="Sell Book" role="button">SUBMIt</a>*@
+                    <div class="form-input dis">
+                        <div class="col-md-12">
+                            <button class="btn btn-work">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+</section>
+}

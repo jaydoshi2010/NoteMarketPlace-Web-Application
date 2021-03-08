@@ -1,0 +1,78 @@
+﻿@model Notemarketplace_front.Models.UserInfo
+
+@{
+    ViewBag.Title = "Admin_add_admin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- add admin -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="add-admin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="page-heading">Add Administrator</p>
+
+                </div>
+                <div class="col-md-6 inside-col">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p>First Name*</p>
+                            @*<input type="text" class="form-control" id="name" placeholder="Enter your first name">*@
+
+                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter First Name" } })
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p>Last Name*</p>
+                            @*<input type="text" class="form-control" id="name" placeholder="Enter your last name">*@
+
+                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Last Name" } })
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p>Email*</p>
+                            @*<input type="text" class="form-control" id="name" placeholder="Enter your email">*@
+
+                            @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Email" } })
+                            @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p>Phone Number</p>
+                            <div class="col-md-2 col-sm-2 col-xs-4 phone-no">
+                                @*<select class="form-control">
+                                        <option>+91</option>
+                                        <option>+1</option>
+                                        <option>+801</option>
+                                    </select>*@
+
+                                @*@Html.DropDownListFor(model => model.CountryCode, ViewBag.CountryCode as SelectList, new { @class = "form-control" })*@
+                                @Html.ValidationMessageFor(model => model.CountryCode, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-10 col-sm-10 col-xs-8  phone-no">
+                                @*<input type="text" class="form-control" id="name" placeholder="Enter phone Number">*@
+
+                                @Html.EditorFor(model => model.PhnNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Phone number" } })
+                                @Html.ValidationMessageFor(model => model.PhnNo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button class="btn btn-work">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </section>
+}

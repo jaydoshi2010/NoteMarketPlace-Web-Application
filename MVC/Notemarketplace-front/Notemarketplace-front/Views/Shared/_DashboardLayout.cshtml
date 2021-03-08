@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>MarketPlace</title>
+
+    <!-- Basic SEO -->
+    <meta name="description" content="Creative website development with html5, css3, jQuery & bootstrap framework">
+    <meta name="keywords" content="HTML5, CSS3, JQuery, Bootstrap, Web Design, Web Development, Responsive website, Creative website">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/Content/img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="~/Content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="~/Content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Responsive Tabs CSS -->
+    <link href="~/Content/css/responsive-tabs/responsive-tabs.min.css" rel="stylesheet" />
+
+    <!-- Animate CSS -->
+    <link href="~/Content/css/animate/animate.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/admin-style.css" rel="stylesheet" />
+
+    <!-- Responsive CSS -->
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+    
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="@Url.Action("Index")">
+                            <img src="~/Content/img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="@Url.Action("Search_notes")">Search Notes</a></li>
+                                <li><a href="@Url.Action("Dashboard")" style="color: #6255a5" ;>Sell Your Notes</a></li>
+                                <li><a href="@Url.Action("Faq")">FAQ</a></li>
+                                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                                <li>
+                                    <div id="user-photo" class="btn-group">
+                                        <img class="img-responsive img-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/user-img.png" alt="user">
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_profile","Home")'">My Profile</button>
+                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_download_notes","Home")'">My Downloads</button>
+                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_sold_notes","Home")'">My Sold Notes</button>
+                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_rejected_notes","Home")'">My Rejected Notes</button>
+                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("Buyer_requests","Home")'">Buyer Requests</button>
+                                            <button class="text-left dropdown-item nav-dropdown-item" type="button">Change Password</button>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="@Url.Action("../Login/Login")"><button type="button" class="btn btn-work btn-login smooth-scroll">logout</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a href="@Url.Action("Search_notes")">Search Notes</a></li>
+                                <li><a href="@Url.Action("Dashboard")" style="color: #6255a5" ;>Sell Your Notes</a></li>
+                                <li><a href="@Url.Action("Faq")">FAQ</a></li>
+                                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                                <li><a href="@Url.Action("Login")"><button type="button" class="btn btn-work btn-login smooth-scroll">Logout</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>
+                        Copyright &copy; Tatvasoft All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6 text-right">
+                    <ul class="pagination social">
+
+                        <li><a href="#"><img src="~/Content/img/facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="~/Content/img/linkedin.png" alt=""></a></li>
+                        <li><a href="#"><img src="~/Content/img/twitter.png" alt=""></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Back To Top -->
+        <!-- <a href="#home" id="back-to-top" class="btn btn-sm btn-general btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a> -->
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- JQuery -->
+    <script src="~/Content/js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Content/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Responsive Tabs JS -->
+    <script src="~/Content/js/responsive-tabs/jquery.responsiveTabs.min.js"></script>
+
+    <!-- Counter -->
+    <script src="~/Content/js/counter/jquery.counterup.min.js"></script>
+
+    <!-- Easing -->
+    <script src="~/Content/js/easing/jquery.easing.1.3.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Content/js/script.js"></script>
+
+
+
+</body>
+
+</html>

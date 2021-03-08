@@ -1,0 +1,305 @@
+﻿
+@{
+    ViewBag.Title = "Faq";
+}
+<!-- important meta tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Title -->
+<title>MarketPlace</title>
+
+<!-- Basic SEO -->
+<meta name="description" content="Creative website development with html5, css3, jQuery & bootstrap framework">
+<meta name="keywords" content="HTML5, CSS3, JQuery, Bootstrap, Web Design, Web Development, Responsive website, Creative website">
+<!-- Favicon -->
+<link rel="shortcut icon" href="~/Content/img/favicon.ico">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+<!-- Fontawesome -->
+<link href="~/Content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Bootstrap CSS -->
+<link href="~/Content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Responsive Tabs CSS -->
+<link href="~/Content/css/responsive-tabs/responsive-tabs.min.css" rel="stylesheet" />
+
+<!-- Animate CSS -->
+<link href="~/Content/css/animate/animate.min.css" rel="stylesheet" />
+
+<!-- Custom CSS -->
+<link href="~/Content/css/style.css" rel="stylesheet" />
+
+<!-- Responsive CSS -->
+<link href="~/Content/css/responsive.css" rel="stylesheet" />
+
+<!-- Book detais in deep-->
+<section id="myNav" class="overlay">
+    <div class="note-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 closebtn-div">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p id="note-details">Notes Details</p>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5">
+                            <img class="img-responsive book-cover-photo" src="~/Content/img/banner.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <p id="note-name">Computer Science</p>
+                            <p id="sub-name">Sciencse</p>
+                            <p id="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum delectus accusantium libero, ipsa beatae enim perferendis vel fugiat, ducimus quam totam nam atque minima alias magni sit, veniam recusandae dolorem.</p>
+                            <a class="btn btn-general btn-work smooth-scroll" href="javascript:void(0)" title="Download" role="button" onclick="openThanku()">Download/ $<span>15</span></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="row notes-right">
+                        <div class="row">
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Institution:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="uni-name" class="note-ans">University Name</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Country:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="country-name" class="note-ans">Country Name</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Course Name:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="course-name" class="note-ans">Course Name</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Course Code:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="course-code" class="note-ans">Code</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Professor:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="prof-name" class="note-ans">Mr. John</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Pages:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="num-pages" class="note-ans">000</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Approved Date:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="date" class="note-ans">Not Found</p>
+                            </div>
+                            <div class="text-left col-md-5 col-sm-5 col-xs-5">
+                                <p>Rating:</p>
+                            </div>
+                            <div class="text-right col-md-7 col-sm-7 col-xs-7">
+                                <p id="Rating" class="note-ans"> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="false"></i> Review</p>
+                            </div>
+                            <div id="user-report-book" class="text-left col-md-12 col-sm-12 col-xs-12">
+                                <p><span>5</span> User marked this note as inappropriate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-md-5">
+                <div class="col-md-12">
+                    <p class="note-preview">Notes Preview</p>
+                </div>
+                <div class="col-md-12">
+                    <div class="preview-page text-center">
+                        <p>1/13</p>
+                        <img class="img-responsive" src="~/Content/img/banner.jpg" alt="book preview">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="col-md-12">
+                    <p class="note-preview">Customers Review</p>
+                </div>
+                <div class="col-md-12 review-page">
+
+                    <div class="col-md-2">
+                        <img class="img-responsive img-circle" src="~/Content/img/customer-1.png" alt="custoer-photo">
+                    </div>
+
+                    <div class="col-md-10">
+                        <div class="rating-info">
+                            <p>
+                                Name <br>
+                                <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="false"></i>
+                                <br>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis fugiat maxime distinctio eius blanditiis.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    <div class="col-md-2">
+                        <img class="img-responsive img-circle" src="~/Content/img/customer-1.png" alt="custoer-photo">
+                    </div>
+
+                    <div class="col-md-10">
+                        <div class="rating-info">
+                            <p>
+                                Name <br>
+                                <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="false"></i>
+                                <br>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis fugiat maxime distinctio eius blanditiis.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    <div class="col-md-2">
+                        <img class="img-responsive img-circle" src="~/Content/img/customer-1.png" alt="custoer-photo">
+                    </div>
+
+                    <div class="col-md-10">
+                        <div class="rating-info">
+                            <p>
+                                Name <br>
+                                <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="false"></i>
+                                <br>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis fugiat maxime distinctio eius blanditiis.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="thank-you">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeThanku()">&times;</a>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto molestiae ab, autem incidunt ut porro excepturi, rerum! Eaque ratione nihil sed exercitationem inventore amet, odio porro itaque, architecto, pariatur natus.
+        </p>
+    </div>
+</section>
+<!-- Book detais in deep end-->
+<!-- FAQ Section -->
+<section id="faq">
+    <div class="faq-heading">
+        <p>Frequently Asked Questions</p>
+    </div>
+    <div class="faq-sub">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="faq-sub-heading">General Question</p>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">What is Marketplace Notes?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">What do the University say?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">Is this legal?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="faq-sub">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="faq-sub-heading">Uploaders</p>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">What can't I sell?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">What notes can I sell?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="faq-sub">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="faq-sub-heading">Downloaders</p>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">How do I buy notes?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button class="accordion">Can I edit the notes I purchased?</button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- FAQ Section Ends -->
+<!-- JQuery -->
+<script src="~/Content/js/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="~/Content/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- Responsive Tabs JS -->
+<script src="~/Content/js/responsive-tabs/jquery.responsiveTabs.min.js"></script>
+
+<!-- Counter -->
+<script src="~/Content/js/counter/jquery.counterup.min.js"></script>
+
+<!-- Easing -->
+<script src="~/Content/js/easing/jquery.easing.1.3.min.js"></script>
+
+<!-- Custom JS -->
+<script src="~/Content/js/script.js"></script>

@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Notemarketplace_front.Models.ContactUs>
+
+@{
+    ViewBag.Title = "ContactUsinfo";
+}
+
+<!-- important meta tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Title -->
+<title>MarketPlace</title>
+
+<!-- Basic SEO -->
+<meta name="description" content="Creative website development with html5, css3, jQuery & bootstrap framework">
+<meta name="keywords" content="HTML5, CSS3, JQuery, Bootstrap, Web Design, Web Development, Responsive website, Creative website">
+<!-- Favicon -->
+<link rel="shortcut icon" href="~/Content/img/favicon.ico">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+<!-- Fontawesome -->
+<link href="~/Content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Bootstrap CSS -->
+<link href="~/Content/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Responsive Tabs CSS -->
+<link href="~/Content/css/responsive-tabs/responsive-tabs.min.css" rel="stylesheet" />
+
+<!-- Animate CSS -->
+<link href="~/Content/css/animate/animate.min.css" rel="stylesheet" />
+
+<!-- Custom CSS -->
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<link href="~/Content/css/admin-style.css" rel="stylesheet" />
+
+<!-- Responsive CSS -->
+<link href="~/Content/css/responsive.css" rel="stylesheet" />
+<!-- Contact-Us Section -->
+
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <p class="page-heading"> User Query</p>
+
+            </div>
+            <div class="col-md-12">
+                <div class="all-type-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center" scope="col">SR NO.</th>
+                                <th class="text-center" scope="col">NAME</th>
+                                <th class="text-center" scope="col">EMAIL</th>
+                                <th class="text-center" scope="col">SUBJECT</th>
+                                <th class="text-center" scope="col">MESSAGE</th>
+
+                                <th class="text-center" scope="col">ACTION</th>
+                            </tr>
+                        </thead>
+
+                        @{ int i = 0; }
+                        @foreach (var item in Model)
+                        {
+                            i = i + 1;
+
+                            <tr>
+                                <td>
+                                    @i
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Subject)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Message)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Reply", "Reply", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                </td>
+                            </tr>
+}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br />
+</section>
+
+

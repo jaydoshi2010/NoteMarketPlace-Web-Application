@@ -1,0 +1,54 @@
+﻿@model Notemarketplace_front.Database.tblNoteCategory
+@{
+    ViewBag.Title = "Admin_add_category";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Add Category  -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="add-category">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="page-heading">Add Category</p>
+                                </div>
+                                <div class="col-md-6 inside-col">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <p>Category Name*</p>
+                                            @*<input type="text" class="form-control" id="name" placeholder="Enter  category name">*@
+
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Note-Category" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <p>Description*</p>
+                                            @*<textarea name="" class="form-control" placeholder="Enter your description"></textarea>*@
+
+                                            @Html.TextAreaFor(model => model.Description, new { @id = "text-area", @class = "form-control", placeholder = "Description" })
+                                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group error">
+                                            @if (@ViewBag.Message != null)
+                                            {
+                                                <label style="color:red"> @ViewBag.Message</label>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="btn btn-general btn-work">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br /><br /><br />
+                    </section>
+}
+
+

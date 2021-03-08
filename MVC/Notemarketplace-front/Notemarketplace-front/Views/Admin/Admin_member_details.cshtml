@@ -1,0 +1,300 @@
+﻿
+@{
+    ViewBag.Title = "Admin_member_details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<!-- member details -->
+<section id="member-detail">
+    <div class="container">
+        <div class="row">
+            <div class="clol-md-12">
+                <p class="page-heading">Member Details</p>
+
+            </div>
+            <div class="col-md-6 inside-col">
+                <div class="col-md-3 col-sm-3 inside-col">
+                    <img src="~/Content/img/member.png" class="img-responsive member-img" alt="member image">
+                </div>
+                <div class="col-md-9 col-sm-9 inside-col member">
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p>First Name:</p>
+
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <p class="person">Richard</p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p>Last Name:</p>
+
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <p class="person">Brown</p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p>Email:</p>
+
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <p class="person">richardbron123@gmail.com</p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p>DOB:</p>
+
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <p class="person">13-08-1990</p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p>Phone Number:</p>
+
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <p class="person">9090989000</p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <p>Collge/University:</p>
+
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-7">
+                        <p class="person">University of California</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 inside-col member">
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>Address 1:</p>
+
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p class="person">144-Diamond Hieght</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>Address 2:</p>
+
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p class="person">Star Colony</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>City:</p>
+
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p class="person">New York</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>State:</p>
+
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p class="person">New York State</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>Country:</p>
+
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p class="person">United State</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>Zip Code:</p>
+
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p class="person">11004-05</p>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-12">
+                <hr>
+
+            </div>
+            <div class="col-md-12">
+                <p class="page-sub-heading">Notes</p>
+                <div class="col-md-12 inside-col">
+                    <div class="all-members-table table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SR NO.</th>
+                                    <th scope="col">NOTE TITLE</th>
+                                    <th scope="col">CATEGORY</th>
+                                    <th scope="col">STATUS</th>
+                                    <th scope="col">DOWNLOADED NOTES</th>
+                                    <th scope="col">TOTAL EARNINGS</th>
+                                    <th scope="col">DATE ADDED</th>
+
+                                    <th scope="col">PUBLISHED DATE</th>
+
+
+                                    <th scope="col"> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Software Development</td>
+                                    <td>IT</td>
+                                    <td>Published</td>
+
+                                    <td>22</td>
+                                    <td>$190</td>
+                                    <td>09-09-19, 10:10</td>
+
+                                    <td>09-09-19, 10:10</td>
+
+
+
+                                    <td class="dropdown">
+
+                                        <div id="dots" class="btn-group">
+                                            <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/dots.png">
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                                <button class=" text-left dropdown-item action-dropdown-item" type="button">Download Notes</button>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Computer Basic</td>
+                                    <td>Computer</td>
+                                    <td>Published</td>
+
+                                    <td>4</td>
+                                    <td>$120</td>
+                                    <td>09-09-19, 10:10</td>
+
+                                    <td>09-09-19, 10:10</td>
+
+
+
+                                    <td class="dropdown">
+
+                                        <div id="dots" class="btn-group">
+                                            <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/dots.png">
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                                <button class=" text-left dropdown-item action-dropdown-item" type="button">Download Notes</button>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Human Body</td>
+                                    <td>Science</td>
+                                    <td>InReview</td>
+
+                                    <td>17</td>
+                                    <td>$560</td>
+                                    <td>09-09-19, 10:10</td>
+
+                                    <td>09-09-19, 10:10</td>
+
+
+
+                                    <td class="dropdown">
+
+                                        <div id="dots" class="btn-group">
+                                            <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/dots.png">
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                                <button class=" text-left dropdown-item action-dropdown-item" type="button">Download Notes</button>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>World War 2</td>
+                                    <td>History</td>
+                                    <td>Published</td>
+
+                                    <td>24</td>
+                                    <td>$190</td>
+                                    <td>09-09-19, 10:10</td>
+
+                                    <td>09-09-19, 10:10</td>
+
+
+
+                                    <td class="dropdown">
+
+                                        <div id="dots" class="btn-group">
+                                            <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/dots.png">
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                                <button class=" text-left dropdown-item action-dropdown-item" type="button">Download Notes</button>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Accounting</td>
+                                    <td>Account</td>
+                                    <td>Published</td>
+
+                                    <td>0</td>
+                                    <td>$69</td>
+                                    <td>09-09-19, 10:10</td>
+
+                                    <td>NA</td>
+
+
+
+                                    <td class="dropdown">
+
+                                        <div id="dots" class="btn-group">
+                                            <img class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/dots.png">
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                                <button class=" text-left dropdown-item action-dropdown-item" type="button">Download Notes</button>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+
+                                <!-- </thead> -->
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+                </div>
+                <div class="text-center" aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">«</a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
