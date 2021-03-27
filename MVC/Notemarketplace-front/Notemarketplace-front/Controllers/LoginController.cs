@@ -33,7 +33,7 @@ namespace Notemarketplace_front.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Login model)
+        public ActionResult Login(Login model, string returnUrl)
         {
             bool isvalid = _Context.tblUsers.Any(db => db.EmailID == model.Email && db.Password == model.Password);
 
@@ -43,13 +43,25 @@ namespace Notemarketplace_front.Controllers
                 if (result.RoleID == 101 || result.RoleID == 102)
                 {
                     FormsAuthentication.SetAuthCookie(model.Email, false);
+
+                    returnUrl = Request.QueryString["ReturnUrl"];
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        Response.Redirect(returnUrl);
+                    }
+
                     return RedirectToAction("Admin_dashboard", "Admin");
                 }
 
                 else if (result.RoleID == 103)
                 {
                     FormsAuthentication.SetAuthCookie(model.Email, false);
-                    return RedirectToAction("Dashboard", "Home");
+
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        Response.Redirect(returnUrl);
+                    }
+                    return RedirectToAction("Dashboard", "Client");
                 }
                 else
                 {
@@ -59,24 +71,15 @@ namespace Notemarketplace_front.Controllers
             else
             {
                 ViewBag.NotValidUser = "Incorrect Email or Password";
-
-                /*if (model.Password == result.Password)
-                {
-
-                  /*  if (User.Identity.IsAuthenticated)
-                    {
-                        string name = User.Identity.Name;
-                    }
-                    if()
-                    FormsAuthentication.SetAuthCookie(result.EmailID,true);
-                    return RedirectToAction("", "user");
-                }
-                else
-                {
-                    ViewBag.NotValidPassword = "Passowrd is Incorrect";
-                }*/
             }
             return View("Login");
+        }
+
+        [Authorize]
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("", "Login");
         }
 
     }

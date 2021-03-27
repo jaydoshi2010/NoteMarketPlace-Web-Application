@@ -20,5 +20,6 @@ namespace Notemarketplace_front.Models
         public string CountryCode { get; set; }
         [RegularExpression("[1-9]{1}[0-9]{9}", ErrorMessage = "Please provide valid phone number")]
         public string PhnNo { get; set; }
+
     }
 }

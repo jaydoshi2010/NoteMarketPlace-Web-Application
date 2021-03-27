@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 
@@ -15,7 +14,7 @@
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                <a class="btn btn-general  btn-work smooth-scroll" href="#add-note" title="add note" role="button">Add Note</a>
+                <a class="btn btn-general  btn-work" href="@Url.Action("Add_Notes")" title="add note" role="button">Add Note</a>
             </div>
         </div>
         <div class="row">
@@ -30,13 +29,20 @@
 
                     <div class="col-md-6 col-sm-6 earning-1">
                         <div class="div-content text-center">
-                            <p>100</p>
+                            <p>@ViewBag.No_soldNote</p>
                             <p>Number of Notes Sold</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 text-center earning-1">
                         <div class="div-content">
-                            <p>$1000</p>
+                            @if (@ViewBag.Earnings != null)
+                                {
+                                    <p>$@ViewBag.Earnings</p>
+                                }
+                                else
+                                {
+                                    <p>$0</p>
+                                }
                             <p>Money Earned</p>
                         </div>
                     </div>
@@ -48,7 +54,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
                     <div class="earning">
                         <div class="div-content">
-                            <p>38</p>
+                            <p>@ViewBag.No_download</p>
                             <p>My Downloads</p>
                         </div>
                     </div>
@@ -57,7 +63,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
                     <div class="earning">
                         <div class="div-content">
-                            <p>12</p>
+                            <p>@ViewBag.Rejectednote</p>
                             <p>My Rejected Notes</p>
                         </div>
                     </div>
@@ -66,7 +72,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
                     <div class="earning">
                         <div class="div-content">
-                            <p>102</p>
+                            <p>@ViewBag.BuyerRequests</p>
                             <p>Buyer Requests</p>
                         </div>
                     </div>
@@ -1343,223 +1349,7 @@
 </section>
 <!-- Dashboard Section Ends -->
 
-<!--      Add Notes Section -->
-<section id="add-note">
-    <div class="add-heading">
-        <img src="~/Content/img/banner-with-overlay.jpg" class="add-img img-responsive" alt="">
-        <div class="centered">Add Notes</div>
-    </div>
-    <form action="">
-        <div class="basic-note">
 
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="add-sub-heading">Basic Note Details</p>
-
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Title*</p>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your notes title">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Category*</p>
-                            <select class="form-control">
-                                <option>Select your category</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-
-
-                            <p>Upload Notes*</p>
-                            <input type="file" style="display: none" id="dispic">
-                            <label for="dispic" class="form-control upload-label text-center">
-                                <img src="~/Content/img/upload-file.png" alt="Upload" />
-                                <p>Upload Picture</p>
-                            </label>
-                        </div>
-
-
-
-
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-
-
-                            <p>Display Picture</p>
-                            <input type="file" style="display: none">
-                            <label for="upload-note" class="form-control upload-label text-center">
-                                <img src="~/Content/img/upload-note.svg" alt="Upload" />
-                                <p>Upload your notes</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Type</p>
-                            <select class="form-control">
-                                <option>Select your note type</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Number of Pages</p>
-                            <input type="text" class="form-control" id="name" placeholder="Enter number of note pages">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-input">
-                            <p>Description*</p>
-                            <textarea class="form-control" id="message" placeholder="Comments Write Here..."></textarea>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="institution-information">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="add-sub-heading">Institution Information</p>
-
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Country</p>
-                            <select class="form-control">
-                                <option>Select your Country</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Institution Name</p>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your Institution name">
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="course-details">
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="add-sub-heading">Course Details</p>
-
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Course Name</p>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your course name">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Course Code</p>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your course code">
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input">
-                            <p>Professor/Lecturer</p>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your Professor name">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="selling-information">
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="add-sub-heading">Selling Information</p>
-
-                    </div>
-                    <div class="col-md-6 inside">
-                        <div class="col-md-12">
-                            <div class="form-input">
-                                <p>Sell For*</p>
-
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="free">
-                                <label class="form-check-label" for="inlineRadio1">Free</label>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="paid">
-                                <label class="form-check-label" for="inlineRadio1">Paid</label>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-input">
-                                <p>Professor/Lecturer</p>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your Professor name">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-
-                        <div class="form-input">
-
-
-                            <p>Note Preview</p>
-                            <input type="file" style="display: none">
-                            <label for="upload-preview" class="form-control upload-label text-center">
-                                <img src="~/Content/img/upload-note.svg" alt="Upload" />
-                                <p>Upload a file</p>
-                            </label>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="add-note-action">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <a class="btn btn-general btn-work btn-add-note smooth-scroll" href="#about" title="Sell Book" role="button">SAVE</a>
-                        <a class="btn btn-general btn-work btn-add-note smooth-scroll" href="#about" title="Sell Book" role="button">PUBLISH</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </form>
-
-</section>
-<!--      Add Notes Section Ends -->
 
 <!--      User Profile Section -->
 <!--<section id="user-profile">

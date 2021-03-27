@@ -59,25 +59,32 @@
                     <div class="container">
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
-                                <li><a href="@Url.Action("Search_notes")">Search Notes</a></li>
-                                <li><a href="@Url.Action("Dashboard")" style="color: #6255a5" ;>Sell Your Notes</a></li>
-                                <li><a href="@Url.Action("Faq")">FAQ</a></li>
+                                <li>@Html.ActionLink("Search Notes", "Search_notes", "Home")</li>
+                                <li>@Html.ActionLink("Sell Your Notes", "Dashboard", "Client")</li>
+
+                                <li>@Html.ActionLink("Faq", "Faq", "Home")</li>
                                 <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                                <li>
-                                    <div id="user-photo" class="btn-group">
-                                        <img class="img-responsive img-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/user-img.png" alt="user">
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_profile","Home")'">My Profile</button>
-                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_download_notes","Home")'">My Downloads</button>
-                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_sold_notes","Home")'">My Sold Notes</button>
-                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("My_rejected_notes","Home")'">My Rejected Notes</button>
-                                            <button class="text-left dropdown-item nav-dropdown-item" type="button" onclick="location.href ='@Url.Action("Buyer_requests","Home")'">Buyer Requests</button>
-                                            <button class="text-left dropdown-item nav-dropdown-item" type="button">Change Password</button>
-                                            
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <div id="user-photo" class="btn-group">
+                                            <img class="img-responsive img-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" src="~/Content/img/user-img.png" alt="user">
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="@Url.Action("My_profile")" class=" text-left dropdown-item action-dropdown-item nav-dropdown-item" type="button">My Profile</a>
+                                                <a href="@Url.Action("My_download_notes")" class=" text-left dropdown-item action-dropdown-item nav-dropdown-item" type="button">My Downloads</a>
+                                                <a href="@Url.Action("My_sold_notes")" class=" text-left dropdown-item action-dropdown-item nav-dropdown-item" type="button">My Sold Notes</a>
+                                                <a href="@Url.Action("My_rejected_notes")" class=" text-left dropdown-item action-dropdown-item nav-dropdown-item" type="button">My Rejected Notes</a>
+                                                <a href="@Url.Action("Buyer_requests")" class=" text-left dropdown-item action-dropdown-item nav-dropdown-item" type="button">Buyer Requests</a>
+                                                <a href="@Url.Action("#")" class=" text-left dropdown-item action-dropdown-item nav-dropdown-item" type="button">Change Password</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li><a href="@Url.Action("../Login/Login")"><button type="button" class="btn btn-work btn-login smooth-scroll">logout</button></a></li>
+                                    </li>
+                                    <li><a href="@Url.Action("../Home/Index")"><button type="button" class="btn btn-work btn-login smooth-scroll">Logout</button></a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="@Url.Action("../Login")"><button type="button" class="btn btn-work btn-login smooth-scroll">Login</button></a></li>
+                                }
                             </ul>
                         </div>
                     </div>
@@ -150,8 +157,6 @@
 
     <!-- Custom JS -->
     <script src="~/Content/js/script.js"></script>
-
-
 
 </body>
 

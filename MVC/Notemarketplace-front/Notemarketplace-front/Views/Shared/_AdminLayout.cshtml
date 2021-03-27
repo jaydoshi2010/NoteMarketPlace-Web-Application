@@ -58,17 +58,26 @@
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
                                 <li>@Html.ActionLink("DASHBOARD", "Admin_dashboard", "Admin")</li>
-                                <li>@Html.ActionLink("NOTES", "Admin_dashboard", "Admin")</li>
+                                @*<li>@Html.ActionLink("NOTES", "Admin_dashboard", "Admin")</li>*@
+                                <li>
+                                    <a class="smooth-scroll dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="">Notes</a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                        <a class="text-left dropdown-item nav-dropdown-item" href="@Url.Action("Admin_notes_under_review")"> Published Notes</a>
+                                        <a class="text-left dropdown-item nav-dropdown-item" href="@Url.Action("Admin_notes_under_review")">Downloaded Notes</a>
+                                        <a class="text-left dropdown-item nav-dropdown-item" href="@Url.Action("Admin_notes_under_review")">Rejected Notes</a>
+                                        <a class="text-left dropdown-item nav-dropdown-item" href="@Url.Action("Admin_notes_under_review")">Notes Under Review</a>
+                                    </div>
+                                </li>
                                 <li>@Html.ActionLink("MEMBERS", "Admin_dashboard", "Admin")</li>
                                 <li>@Html.ActionLink("REPORTS", "Admin_dashboard", "Admin")</li>
                                 <li>
                                     <a class="smooth-scroll dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="">Settings</a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                                         <a href="@Url.Action("Admin_system_config")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage System Configuration</a>
-                                        <a href="@Url.Action("Admin_add_admin")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Administrator</a>
-                                        <a href="@Url.Action("Admin_add_category")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Category</a>
-                                        <a href="@Url.Action("Admin_add_country")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Country</a>
-                                        <a href="@Url.Action("Admin_add_type")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Type</a>
+                                        <a href="@Url.Action("Manage_Admin")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Administrator</a>
+                                        <a href="@Url.Action("Manage_Category")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Category</a>
+                                        <a href="@Url.Action("Manage_Country")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Country</a>
+                                        <a href="@Url.Action("Manage_Type")" class=" text-left dropdown-item action-dropdown-item" type="button">Manage Type</a>
                                     </div>
                                 </li>
 
@@ -87,7 +96,7 @@
         <img class="img-responsive img-circle" src="~/Content/img/user-img.png" alt="user">
     </a></li>
     -->
-                                <li><a href="@Url.Action("../Login/Login")"><button type="button" class="btn btn-work btn-login smooth-scroll">logout</button></a></li>
+                                <li><a href="@Url.Action("../Login/Logout")"><button type="button" class="btn btn-work btn-login smooth-scroll">logout</button></a></li>
                             </ul>
                         </div>
                     </div>

@@ -55,7 +55,7 @@
                                         <option>+801</option>
                                     </select>*@
 
-                                @*@Html.DropDownListFor(model => model.CountryCode, ViewBag.CountryCode as SelectList, new { @class = "form-control" })*@
+                                @Html.DropDownListFor(model => model.CountryCode, ViewBag.CountryCode as SelectList, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.CountryCode, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-10 col-sm-10 col-xs-8  phone-no">
@@ -73,6 +73,6 @@
                 </div>
             </div>
         </div>
-        <br />
     </section>
+    <br />
 }

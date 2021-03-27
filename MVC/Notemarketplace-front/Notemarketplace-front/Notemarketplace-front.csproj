@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\ForgotPasswordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -192,6 +193,7 @@
     </Compile>
     <Compile Include="Models\ContactUs.cs" />
     <Compile Include="Models\datafile.cs" />
+    <Compile Include="Models\ForgotPass.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -342,12 +344,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Faq.cshtml" />
     <Content Include="Views\Home\Search_notes.cshtml" />
-    <Content Include="Views\Home\Dashboard.cshtml" />
-    <Content Include="Views\Home\Buyer_requests.cshtml" />
-    <Content Include="Views\Home\My_download_notes.cshtml" />
-    <Content Include="Views\Home\My_profile.cshtml" />
-    <Content Include="Views\Home\My_sold_notes.cshtml" />
-    <Content Include="Views\Home\My_rejected_notes.cshtml" />
+    <Content Include="Views\Client\Dashboard.cshtml" />
+    <Content Include="Views\Client\Buyer_requests.cshtml" />
+    <Content Include="Views\Client\My_download_notes.cshtml" />
+    <Content Include="Views\Client\My_profile.cshtml" />
+    <Content Include="Views\Client\My_sold_notes.cshtml" />
+    <Content Include="Views\Client\My_rejected_notes.cshtml" />
     <Content Include="Views\Shared\_DashboardLayout.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -363,6 +365,13 @@
     <Content Include="Views\SignUp\SignUp.cshtml" />
     <Content Include="Views\ForgotPassword\Forgot_password.cshtml" />
     <Content Include="Views\Admin\ContactUsinfo.cshtml" />
+    <Content Include="Views\Admin\Manage_Category.cshtml" />
+    <Content Include="Views\Admin\Manage_Country.cshtml" />
+    <Content Include="Views\Admin\Manage_Type.cshtml" />
+    <Content Include="Views\Admin\Manage_Admin.cshtml" />
+    <Content Include="Views\Client\Add_Notes.cshtml" />
+    <Content Include="Views\Client\Display_book.cshtml" />
+    <Content Include="Views\Admin\Admin_notes_under_review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

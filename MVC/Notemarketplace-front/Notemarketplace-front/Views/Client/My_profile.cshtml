@@ -1,4 +1,4 @@
-﻿
+﻿@model Notemarketplace_front.Database.tblUser
 @{
     ViewBag.Title = "My_profile";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
@@ -23,7 +23,9 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="form-input">
                             <p>First Name*</p>
-                            <input type="text" class="form-control" id="fname" placeholder="Enter your first name">
+                            @*<input type="text" class="form-control" id="fname" placeholder="Enter your first name">*@
+                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter full name" } })
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">

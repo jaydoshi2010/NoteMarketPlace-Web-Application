@@ -74,7 +74,7 @@ namespace Notemarketplace_front.Controllers
                                 dbobject.SaveChanges();
                                 ModelState.Clear();
                                 FormsAuthentication.SetAuthCookie(model.EmailID, true);
-                                return RedirectToAction("My_profile", "Home");
+                                return RedirectToAction("My_profile", "Client");
                             }
                             catch (DbEntityValidationException e)
                             {
@@ -93,7 +93,7 @@ namespace Notemarketplace_front.Controllers
                     }
                     else
                     {
-                        ViewBag.NotValidEmail = "This Email is already exists";
+                        ViewBag.NotValidEmail = "Email is already exists";
                     }
                 }
                 else
